@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <RelativeLayout
+            android:id="@+id/rootParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10ssp"
+            android:background="@drawable/bg_gradient_itype_tv_cast">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+              >
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15">
+
+                    <com.hungama.music.utils.customview.circleimageview.CircleImageView
+                        android:id="@+id/ivUserImage"
+                        android:layout_width="@dimen/_52sdp"
+                        android:layout_height="@dimen/_52sdp"
+                        android:layout_marginBottom="@dimen/dimen_2"
+                        android:scaleType="centerCrop"
+                        android:src="@color/colorPlaceholder"
+                        app:civ_circle_background_color="@color/colorPlaceholder"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    style="@style/StyleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_3"
+                    android:layout_marginBottom="@dimen/dimen_8"
+                    android:fontFamily="@font/sf_pro_text_medium"
+                    android:lineSpacingExtra="@dimen/font_2"
+                    android:maxLines="2"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingStart="@dimen/dimen_10"
+                    android:paddingEnd="@dimen/dimen_10"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="@string/other_str_19"
+                    android:textColor="@color/item_title_color"
+                    android:textSize="@dimen/font_13" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+
+</layout>

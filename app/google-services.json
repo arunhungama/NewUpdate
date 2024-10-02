@@ -1,0 +1,187 @@
+{
+  "project_info": {
+    "project_number": "102086738647",
+    "firebase_url": "https://fabled-emissary-537.firebaseio.com",
+    "project_id": "fabled-emissary-537",
+    "storage_bucket": "fabled-emissary-537.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102086738647:android:970d44f387b79df5",
+        "android_client_info": {
+          "package_name": "com.hungama.hungamamusic.lite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102086738647-7t5pmr1c4n5t2bgbev6tk82era326c3p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungama.hungamamusic.lite",
+            "certificate_hash": "6f5a3379ce0e204b2b93d6c85b0c3df5f9969661"
+          }
+        },
+        {
+          "client_id": "102086738647-25pcu0n66bs9l8qeb4s7f8ugign2u8et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMEoGWyIpVaeUxqzdsy0ThnUgZ3k5TwpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102086738647-25pcu0n66bs9l8qeb4s7f8ugign2u8et.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "102086738647-6og5id9cjg6tqbmg5lt9ndpqf6c43rnf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungama.hungamamovies"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102086738647:android:9ba55882bb71f5e2",
+        "android_client_info": {
+          "package_name": "com.hungama.hungamaplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102086738647-25pcu0n66bs9l8qeb4s7f8ugign2u8et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMEoGWyIpVaeUxqzdsy0ThnUgZ3k5TwpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102086738647-25pcu0n66bs9l8qeb4s7f8ugign2u8et.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "102086738647-6og5id9cjg6tqbmg5lt9ndpqf6c43rnf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungama.hungamamovies"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102086738647:android:1078111999a1c0a709e692",
+        "android_client_info": {
+          "package_name": "com.hungama.music.songs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102086738647-25pcu0n66bs9l8qeb4s7f8ugign2u8et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMEoGWyIpVaeUxqzdsy0ThnUgZ3k5TwpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102086738647-25pcu0n66bs9l8qeb4s7f8ugign2u8et.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "102086738647-6og5id9cjg6tqbmg5lt9ndpqf6c43rnf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungama.hungamamovies"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102086738647:android:815a864d244bbdb3",
+        "android_client_info": {
+          "package_name": "com.hungama.myplay.activity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102086738647-1mhnk0juqpn4uap77v6blkk2r4b097s2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungama.myplay.activity",
+            "certificate_hash": "6f5a3379ce0e204b2b93d6c85b0c3df5f9969661"
+          }
+        },
+        {
+          "client_id": "102086738647-5te5v5vauhpbkcfc509o2dl3kvelmjvi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungama.myplay.activity",
+            "certificate_hash": "8e8aa1c46ed76f8ce750711ecef7df030efef6c5"
+          }
+        },
+        {
+          "client_id": "102086738647-uairl3cnlu2aufebvq5h74h3sr3daiv6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hungama.myplay.activity",
+            "certificate_hash": "2966505428a84b4d34102cff6a87bf2127b4d933"
+          }
+        },
+        {
+          "client_id": "102086738647-25pcu0n66bs9l8qeb4s7f8ugign2u8et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMEoGWyIpVaeUxqzdsy0ThnUgZ3k5TwpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102086738647-25pcu0n66bs9l8qeb4s7f8ugign2u8et.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "102086738647-6og5id9cjg6tqbmg5lt9ndpqf6c43rnf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hungama.hungamamovies"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

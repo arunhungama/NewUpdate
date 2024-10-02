@@ -1,0 +1,462 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chartDetailroot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg_color">
+    <View
+        android:id="@+id/views"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/podcast_gradient_layer" />
+
+    <include
+        android:id="@+id/view1"
+        layout="@layout/common_blur_view" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayoutPodcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:shimmer_repeat_mode="restart"
+        app:shimmer_shape="radial"
+        android:visibility="gone"
+        android:background="@color/home_bg_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/skeleton_podcast_details"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/llHalf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_collapsingImageBg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <com.hungama.music.utils.customview.blurview.CustomBlurView
+                android:id="@+id/realtimeBlurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:realtimeBlurRadius="150dp"
+                app:realtimeOverlayColor="@color/colorTransparentBlack" />
+
+
+            <RelativeLayout
+                android:id="@+id/relative_v2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/podcastAlbumArtImageView_v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_280sdp"
+                    android:background="@drawable/bg_gradient_placeholder"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/vBottomGradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:background="@drawable/ic_bottom"
+                    android:layout_alignParentBottom="true"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/relative_v2">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/podcastAlbumArtImageView"
+                    android:layout_width="@dimen/dimen_178"
+                    android:layout_height="@dimen/dimen_178"
+                    android:background="@drawable/bg_gradient_placeholder"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="@dimen/dimen_40"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="gone"
+                    app:shapeAppearance="@style/ShapeAppearanceOverlay.App.RoundCornerBucket" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_16"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/podcastAlbumArtImageView">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_18"
+                        android:layout_marginEnd="@dimen/dimen_18"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sf_pro_text_semibold"
+                        android:maxLines="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/font_20"
+                        app:lineHeight="@dimen/font_25" />
+
+                    <TextView
+                        android:id="@+id/tvSubTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_18"
+                        android:layout_marginTop="@dimen/dimen_6"
+                        android:layout_marginEnd="@dimen/dimen_18"
+                        android:fontFamily="@font/sf_pro_text_medium"
+                        android:textColor="@color/item_title_color"
+                        android:textSize="@dimen/font_15"
+                        app:lineHeight="@dimen/font_18" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llDetails2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llDetails">
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llListen"
+                        android:layout_width="@dimen/dimen_340"
+                        android:layout_height="@dimen/dimen_42"
+                        android:background="@drawable/corner_radius_18_bg_blue"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.hungama.music.utils.customview.fontview.FontAwesomeImageView
+                            android:id="@+id/ivListen"
+                            style="@style/commonMediumIconStyle"
+                            app:fontText="@string/icon_play_2" />
+
+                        <TextView
+                            android:id="@+id/tvListen"
+                            style="@style/commonMediumButtonStyle"
+                            android:text="@string/audio_books_str_detail_page_cta1" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llSample"
+                        android:layout_width="@dimen/dimen_340"
+                        android:layout_height="@dimen/dimen_42"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:background="@drawable/corner_radius_18_bg_alpha_white"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <!--<com.hungama.music.utils.customview.blurview.CustomShapeBlurView
+                                android:id="@+id/blurViewGender"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:topLeftRadius="@dimen/dimen_18"
+                                app:topRightRadius="@dimen/dimen_18"
+                                app:bottomLeftRadius="@dimen/dimen_18"
+                                app:bottomRightRadius="@dimen/dimen_18"
+                                app:realtimeOverlayColor="@color/blur_one_half_opacity_white_color" />-->
+
+                            <com.hungama.music.utils.customview.fontview.FontAwesomeImageView
+                                android:id="@+id/ivSample"
+                                style="@style/commonMediumIconStyle"
+                                app:fontText="@string/icon_earphone_video" />
+
+                            <TextView
+                                android:id="@+id/tvSample"
+                                style="@style/commonMediumButtonStyle"
+                                android:text="@string/audio_books_str_detail_page_cta2" />
+
+                            <!--<TextView
+                                android:id="@+id/tvFollow"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/button_bg_gradient_follow"
+                                android:fontFamily="@font/sf_pro_text"
+                                android:gravity="center"
+                                android:text="@string/profile_str_2"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/font_16"
+                                app:lineHeight="@dimen/font_20" />-->
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.hungama.music.utils.customview.ShowMoreTextView
+                    android:id="@+id/tvReadMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_18"
+                    android:layout_marginTop="@dimen/dimen_17"
+                    android:layout_marginEnd="@dimen/dimen_28"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:fontFamily="@font/sf_pro_text"
+                    android:textColor="#c6c6c6"
+                    android:textSize="@dimen/font_13"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/llDetails2"
+                    app:lineHeight="@dimen/font_22" />
+
+                <View
+                    android:id="@+id/devider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginStart="@dimen/dimen_18"
+                    android:layout_marginTop="@dimen/dimen_19"
+                    android:layout_marginEnd="@dimen/dimen_18"
+                    android:alpha="0.2"
+                    android:background="@color/colorWhite"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/tvReadMore" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/topView">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_34"
+                    android:layout_marginStart="@dimen/dimen_18"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:minHeight="@dimen/dimen_34"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tabBackground="@drawable/selector_tab_home"
+                    app:tabGravity="fill"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@null"
+                    android:visibility="gone"
+                    app:tabSelectedTextColor="@color/tab_selected_color"
+                    app:tabTextAppearance="@style/TabTextAppearance" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/sortView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tabLayout"
+                    android:layout_marginStart="@dimen/dimen_18"
+                    android:layout_marginTop="@dimen/dimen_8"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_19">
+
+                        <TextView
+                            android:id="@+id/tvEpisodesCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dimen_5"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/sf_pro_text_semibold"
+                            android:maxLines="1"
+                            android:textColor="@color/item_title_color"
+                            android:textSize="@dimen/font_17"
+                            app:lineHeight="@dimen/font_20" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvChapter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        tools:listitem="@layout/row_audio_book_detail"
+                        tools:itemCount="3" />
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/rlShowMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_42"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dimen_34"
+                        android:background="@drawable/corner_radius_18_bg_alpha_white"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/dimen_21"
+                        android:paddingEnd="@dimen/dimen_17"
+                        android:visibility="gone">
+
+                        <com.hungama.music.utils.customview.fontview.FontAwesomeImageView
+                            style="@style/commonMediumIconStyle"
+                            app:fontText="@string/icon_down"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            style="@style/commonMediumButtonStyle"
+                            android:text="@string/podcast_str_10" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlRecommended"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dimen_9"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/sortView">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRecomendation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        tools:itemCount="20"
+                        android:clipToPadding="false"/>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+            <!-- Scrollable content -->
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/progress"
+        layout="@layout/layout_progress"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/rlHeading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60">
+
+        <include
+            android:id="@+id/headBlur"
+            layout="@layout/common_blur_view"
+            android:visibility="invisible" />
+
+        <include layout="@layout/common_details_page_back_menu_header_on_scroll_visible" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llListenActionBar"
+                android:layout_width="@dimen/dimen_150"
+                android:layout_height="@dimen/dimen_42"
+                android:background="@drawable/corner_radius_18_bg_blue"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.hungama.music.utils.customview.fontview.FontAwesomeImageView
+                    android:id="@+id/ivListenActionBar"
+                    style="@style/commonMediumIconStyle"
+                    app:fontText="@string/icon_play_2" />
+
+                <TextView
+                    android:id="@+id/tvListenActionBar"
+                    style="@style/commonMediumButtonStyle"
+                    android:text="@string/audio_books_str_detail_page_cta1" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</RelativeLayout>

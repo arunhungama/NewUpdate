@@ -1,0 +1,23 @@
+HungamaUn sign certificate detail
+-> File name : HungamaUn.jks
+------------------------------
+
+keyAlias 'HungamaUn'
+keyPassword '192e0cc8-0392-4c6c-ac98-1e8c9144aac7'
+storeFile file('../app/KeyStoreExtra/HungamaUn')
+storePassword '192e0cc8-0392-4c6c-ac98-1e8c9144aac7'
+
+First and last name : Hungama Digital
+Organizational unit : HDMEPL
+Organization        : Hungama Digital Media Entertainment Pvt Ltd
+City                : Mumbai
+State               : MH
+Country Code:       : IN
+
+
+  storeFile file("KeyStoreExtra/HungamaMyPlay")
+            storePassword "hungama123"
+            keyAlias "hungama"
+             keyPassword "hungama123"
+            v2SigningEnabled true
+

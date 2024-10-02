@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_85sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="@dimen/_1sdp"
+    android:layout_marginStart="@dimen/_1sdp"
+    android:id="@+id/cnMain">
+
+<!--        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_86sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardElevation="0dp"
+            android:layout_margin="@dimen/_2sdp">-->
+
+            <RelativeLayout
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/white_border_transparent_bg"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp">
+                <com.hungama.music.utils.customview.blurview.CustomBlurView
+                    android:id="@+id/realtimeBlurView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:realtimeBlurRadius="150dp"
+                    android:visibility="gone"
+                    app:realtimeOverlayColor="#54E29113" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_text"
+                        android:lineSpacingExtra="2sp"
+                        android:textColor="#6B5026"
+                        android:textSize="@dimen/font_9"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        android:text="@string/with_ticket_of" />
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:lineSpacingExtra="2sp"
+                        android:textColor="#6B5026"
+                        android:textSize="@dimen/font_11"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:textStyle="normal"
+                        tools:text="₹6999" />
+
+                    <TextView
+                        android:id="@+id/tvPlanTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_text_bold"
+                        android:textColor="#32240D"
+                        android:textSize="@dimen/font_14"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        tools:text="1 Year" />
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sf_pro_text"
+                        android:lineSpacingExtra="2sp"
+                        android:textColor="#6B5026"
+                        android:textSize="@dimen/font_12"
+                        android:textStyle="normal"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="Membership" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+            </RelativeLayout>
+<!--        </androidx.cardview.widget.CardView>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

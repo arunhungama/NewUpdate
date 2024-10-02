@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!--<vector android:height="24dp" android:viewportHeight="6.0"--><!--android:viewportWidth="6.0" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">--><!--<path android:fillColor="#EA9800"--><!--android:pathData="M3,3m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"--><!--android:strokeColor="#00000000" android:strokeWidth="1"/>--><!--</vector>-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:useLevel="false">
+    <corners android:radius="@dimen/dimen_16" />
+    <gradient android:startColor="#31FFFFFF" android:endColor="#14FFFFFF"  android:type="radial"  android:gradientRadius="250dp"/>
+    <stroke android:color="#14FFFFFF" android:width="2dp"/>
+
+</shape>
+

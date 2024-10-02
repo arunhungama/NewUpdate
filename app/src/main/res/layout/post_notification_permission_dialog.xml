@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.hungama.music.utils.customview.blurview.CustomShapeBlurView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:topLeftRadius="@dimen/common_popup_round_corner"
+        app:topRightRadius="@dimen/common_popup_round_corner"
+        app:realtimeBlurRadius="150dp"
+        app:realtimeOverlayColor="@color/colorTransparentBlack"/>
+    <View
+        android:id="@+id/vDevider1"
+        android:layout_width="@dimen/dimen_42"
+        android:layout_height="4dp"
+        android:background="@drawable/bottomsheet_icon_background"
+        android:backgroundTint="@color/gnt_white"
+        android:layout_marginTop="@dimen/dimen_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="@dimen/dimen_300"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_26"
+        android:text="@string/popup_str_117_heading"
+        android:fontFamily="@font/sf_pro_text_semibold"
+        android:textColor="@color/color_text"
+        android:textSize="@dimen/font_17"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vDevider1" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="@dimen/dimen_350"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_9"
+        android:lineSpacingExtra="@dimen/dimen_5"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_30sdp"
+
+        android:text="@string/popup_str_117_subheading"
+        android:textColor="@color/item_sub_title_color"
+        android:textSize="@dimen/font_13"
+        android:gravity="center"
+        android:fontFamily="@font/sf_pro_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_32"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tvGotoSettings"
+            android:layout_width="@dimen/dimen_320"
+            android:layout_height="@dimen/dimen_42"
+            android:background="@drawable/corner_radius_18_bg_blue"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/commonMediumButtonStyle"
+                android:text="@string/popup_str_117_CTA"
+                android:textSize="@dimen/font_14"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tvCancel"
+            android:layout_width="@dimen/dimen_130"
+            android:layout_height="@dimen/dimen_40"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/commonMediumButtonStyle"
+                android:text="@string/popup_str_20"
+                android:textSize="@dimen/font_14"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:id="@+id/vDevider2"
+            android:layout_width="@dimen/dimen_102"
+            android:layout_height="4dp"
+            android:background="@drawable/bottomsheet_icon_background"
+            android:layout_marginTop="@dimen/dimen_14"
+            android:backgroundTint="@color/color_text"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

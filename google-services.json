@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "662059264115",
+    "firebase_url": "https://bollywoodhungamapwa.firebaseio.com",
+    "project_id": "bollywoodhungamapwa",
+    "storage_bucket": "bollywoodhungamapwa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662059264115:android:fb6b0942df716eea262206",
+        "android_client_info": {
+          "package_name": "com.bollywoodhungama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662059264115-kolgr1164pkrder3uep88mvmlnn26mqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bollywoodhungama",
+            "certificate_hash": "d9a7f0227beaddca865c5ee3646a6a8170b9bc04"
+          }
+        },
+        {
+          "client_id": "662059264115-e4af4adf1gntqbb0qqn1v1l8j2n1gadn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2GbVnINkgMNltSQNBKJsApPlwN2BqTQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662059264115-e4af4adf1gntqbb0qqn1v1l8j2n1gadn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

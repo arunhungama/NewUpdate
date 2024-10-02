@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/paytm_dialog">
+    <com.hungama.music.utils.customview.blurview.CustomShapeBlurView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:topLeftRadius="@dimen/common_popup_round_corner"
+        app:topRightRadius="@dimen/common_popup_round_corner"
+        app:realtimeBlurRadius="150dp"
+        app:realtimeOverlayColor="@color/paytm_dialog"/>
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/celebration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_mobile_dialog"
+        android:layout_marginTop="@dimen/dimen_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_26"
+        android:text="Dive Into Entertainment"
+        android:fontFamily="@font/sf_pro_text_semibold"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/font_21"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_image" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_9"
+        android:lineSpacingExtra="@dimen/dimen_5"
+        android:text="You're all set for an amazing time at the
+event. But wait, there's more! Immerse yourself into the world of music, movies and more."
+        android:textColor="@color/item_title_color"
+        android:textSize="@dimen/font_14"
+        android:gravity="center"
+        android:fontFamily="@font/sf_pro_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_32"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tvHome"
+            android:layout_width="@dimen/dimen_320"
+            android:layout_height="@dimen/dimen_42"
+            android:background="@drawable/corner_radius_18_bg_blue"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/commonMediumButtonStyle"
+                android:text="Explore Hungama"
+                android:textSize="@dimen/font_14"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tvViewTicket"
+            android:layout_width="@dimen/dimen_130"
+            android:layout_height="@dimen/dimen_40"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/commonMediumButtonStyle"
+                android:text="View My Tickets"
+                android:textSize="@dimen/font_14"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
